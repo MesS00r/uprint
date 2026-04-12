@@ -1,4 +1,4 @@
-#include "usart.hpp"
+#include "uprint.hpp"
 
 // ****** USART INIT ******
 
@@ -29,14 +29,6 @@ void uput_str(const char *str) {
         str++;
     }
 }
-
-// ****** USART SCAN STR ******
-
-//TODO: this
-// char uget_ch(void) {
-//     while (!(UCSR0A & (1 << RXC0)));
-//     return UDR0;
-// }
 
 // ****** USART PRINT DEC ******
 

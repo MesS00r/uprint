@@ -7,7 +7,7 @@
 int main(void) {
     ubegin(9600);
 
-    uprint("Hello");
+    uprint("Hello ");
     uprintln("world");
 
     uprint("NUMS -> ", neg(-123), ", ", bin(7), ", ", 12, ", ", hex(1111), '\n');
