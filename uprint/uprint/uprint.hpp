@@ -1,3 +1,8 @@
+/**
+ * @file USARTPrint.hpp
+ * @brief Заголовочный файл для USART-вывода (вывод с поддержкой C++ обёрток).
+ */
+
 #ifndef USARTPRINT_HPP_INCLUDED
 #define USARTPRINT_HPP_INCLUDED
 
@@ -84,7 +89,7 @@ void uprint_hex(const uint16_t num);
 /**
  * @defgroup specifiers Функции-спецификаторы.
  * @brief Помечают числа через структуры для представления их в разных форматах,
- *        Используется в шаблоне uprint (bin, hex, neg - отрицательное число).
+ *        Используется в шаблоне uprint (s_bin, s_hex, s_neg - отрицательное число).
  * @see uprint
  * @{
  */
@@ -160,6 +165,8 @@ namespace uprint_sys {
  * @warning Количество аргументов ограничено 20.
  * @warning Если передать в качестве аргумента отрицательное число без функции-спецификатора,
  *          то число напечатается некорректно.
+ * @warning Если передать в качестве аргумента значение недопустимого типа,
+ *          то будет ошибка (Invalid type).
  */
 template<typename ... Args>
 void uprint(const Args& ... args) {
